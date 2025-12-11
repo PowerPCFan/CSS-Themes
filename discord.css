@@ -78,7 +78,7 @@ div[class^="nameTag__"] div[class^="panelSubtextContainer__"] div {
 
 /* improve UI of vencord spotify player thing (if you have that plugin enabled) */
 #vc-spotify-player {
-    padding: 16px  16px   8px    16px;
+    padding: 16px 16px 8px 16px;
 }
 
 #vc-spotify-player #vc-spotify-album-image {
@@ -89,6 +89,7 @@ div[class^="nameTag__"] div[class^="panelSubtextContainer__"] div {
 #vc-spotify-player .vc-spotify-button-row {
     display: flex;
     gap: 4px !important;
+    color: var(--interactive-text-default)  /* discord's recent update broke the icon color somehow */
 }
 
 #vc-spotify-player .vc-spotify-button-row .vc-spotify-repeat,
