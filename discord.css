@@ -31,8 +31,8 @@ div[class^="checkmarkCircle__"] {
 }
 
 /* Non-nitro profile background color */
-.outer_c0bea0 {
-    background-color: var(--app-background-frame) !important;
+div[class^="outer_"] {
+    background-color: var(--background-base-lowest) !important;
 }
 
 /* new user area revert */
