@@ -1,12 +1,4 @@
 @import url("https://raw.githubusercontent.com/scattagain/VencordStuff/refs/heads/main/css/GuildbarRevert.css");  /* Server bar revert */
-@import url("https://nspc911.github.io/themes/vencord/BlurryBackdrop.theme.css");  /* blurry backdrop */
-
-:root {
-  /* The blur radius, can be any types of length */
-  --blrbg-blur-by: 2px;
-  /* how dim you want the bg aside from the blur */
-  --blrbg-dimmness: 25;
-}
 
 /* goes with server bar revert - change appearance settings border radius */
 div[class^="appIconSelection__"],
