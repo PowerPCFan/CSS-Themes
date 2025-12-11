@@ -6,6 +6,9 @@
   --blrbg-blur-by: 2px;
   /* how dim you want the bg aside from the blur */
   --blrbg-dimmness: 25;
+
+  /* Fix issues with Vencord plugins due to Discord's new update */
+  --header-secondary: var(--text-strong);
 }
 
 /* goes with server bar revert - change appearance settings border radius */
