@@ -6,9 +6,6 @@
   --blrbg-blur-by: 2px;
   /* how dim you want the bg aside from the blur */
   --blrbg-dimmness: 25;
-
-  /* Fix issues with Vencord plugins due to Discord's new update */
-  --header-secondary: var(--text-strong);
 }
 
 /* goes with server bar revert - change appearance settings border radius */
@@ -92,7 +89,6 @@ div[class^="nameTag__"] div[class^="panelSubtextContainer__"] div {
 #vc-spotify-player .vc-spotify-button-row {
     display: flex;
     gap: 4px !important;
-    color: var(--interactive-text-default)  /* discord's recent update broke the icon color somehow */
 }
 
 #vc-spotify-player .vc-spotify-button-row .vc-spotify-repeat,
