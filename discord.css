@@ -1,71 +1,46 @@
 @import url("https://raw.githubusercontent.com/scattagain/VencordStuff/refs/heads/main/css/GuildbarRevert.css");  /* Server bar revert */
 
-/* goes with server bar revert - change appearance settings border radius */
-div[class^="appIconSelection__"],
-div[class^="selectionCircle__"],
-div[class^="themeSelection__"],
-div[class^="themeSelection__"] div[class^="borderOverlay__"] {
-    border-radius: 50% !important;
-}
-div[class^="checkmarkCircle__"] {
-    position: absolute !important;
-    inset-inline-end: -2.5px !important;
-    top: -2.5px !important;
-}
-
 /* extra spacing below most recent message (more like old UI) */
-.channelBottomBarArea_f75fb0 {
-  margin-top: 0.5rem !important;
+div[class*="-channelBottomBarArea"] {
+    margin-top: 0.5rem !important;
 }
 
 /* Members list spacing/padding */
-.memberInner__5d473 {
-  margin-top: 3px !important;
-  margin-bottom: 3px !important;
-}
-
-/* some list thing padding */
-.listRow__9d78f {
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
+div[class*="-memberInner"] {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
 }
 
 /* Non-nitro profile background color */
-div[class^="outer_"] {
+div[class*="-outer"] {
     background-color: var(--background-base-lowest) !important;
 }
 
 /* new user area revert */
-.visual-refresh div[class^="sidebar_"] section[class^="panels_"] {
+.visual-refresh div[class*="-sidebar"] section[class*="-panels"] {
     width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);
     left: var(--custom-guild-list-width);
     bottom: 0px;
     border-radius: 0px;
     border: none;
 }
-div[class^="nameTag__"] div[class^="panelTitleContainer__"] {
+div[class*="-nameTag"] div[class*="-panelTitleContainer"] {
     margin-bottom: 0;
 }
-div[class^="nameTag__"] div[class^="panelTitleContainer__"] div {
+div[class*="-nameTag"] div[class*="-panelTitleContainer"] div {
     font-size: 0.9rem !important;
 }
-div[class^="nameTag__"] div[class^="panelSubtextContainer__"] div {
+div[class*="-nameTag"] div[class*="-panelSubtextContainer"] div {
     font-size: 0.75rem !important;
 }
-.visual-refresh nav[class*=guilds_] {
+.visual-refresh nav[class*=-guilds] {
   margin-bottom: unset;
 }
 
-/* right click menu border */
-[class*=menu_][class*=flexible_] {
-    /* border: 1px solid #696779; */
-    border: 1px solid var(--input-border)
-}
-
 /* make server title thing at the top left aligned */
-.title_c38106 { 
-  margin-left: 14px; 
-  justify-content: left;            
+div[class*="-bar"] div[class*="-title"] { 
+  margin-left: 8px;
+  justify-content: left;
 }
 
 /* improve UI of vencord spotify player thing (if you have that plugin enabled) */
@@ -76,6 +51,11 @@ div[class^="nameTag__"] div[class^="panelSubtextContainer__"] div {
 #vc-spotify-player #vc-spotify-album-image {
     height: 100%;
     border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#vc-spotify-player #vc-spotify-album-image:hover {
+    transform: scale(1.1);
 }
 
 #vc-spotify-player .vc-spotify-button-row {
@@ -92,16 +72,16 @@ div[class^="nameTag__"] div[class^="panelSubtextContainer__"] div {
     margin-top: 4px;
 }
 
-#vc-spotify-player div[class^="slider_"] {
+#vc-spotify-player div[class*="-slider"] {
     --grabber-size: 12px !important;
 }
 
-#vc-spotify-player div[class^="grabber_"] {
+#vc-spotify-player div[class*="-grabber"] {
     transition: left 0.2s ease;
 }
 
-#vc-spotify-player div[class^="grabber_"],
-#vc-spotify-player div[class^="slider_"] {
+#vc-spotify-player div[class*="-grabber"],
+#vc-spotify-player div[class*="-slider"] {
     cursor: pointer;
 }
 
@@ -115,48 +95,48 @@ div[class^="nameTag__"] div[class^="panelSubtextContainer__"] div {
 }
 
 /* TYPING INDICATOR REVERT */
-.channelTextArea_f75fb0 {
+.f75fb00fb7356cbe-channelTextArea {
     margin-bottom: 25px;
 }
 .align-chat-input {
     --custom-channel-textarea-text-area-height: 52px;
 }
-.align-chat-input .attachWrapper__0923f {
+.align-chat-input .\_0923f156a0410684-attachWrapper {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.align-chat-input .inTextChannel_b88801.base_b88801 {
+.align-chat-input .b8880176888cc928-inTextChannel.b8880176888cc928-base {
     bottom: 0px;
     top: auto;
 }
-.align-chat-input .inTextChannel_b88801 .typingDots_b88801 {
+.align-chat-input .b8880176888cc928-inTextChannel .b8880176888cc928-typingDots {
     margin-left: 5px;
 }
-.align-chat-input .inTextChannel_b88801 .text_b88801 {
+.align-chat-input .b8880176888cc928-inTextChannel .b8880176888cc928-text {
     margin-left: 0cqw
 }
-.scrollerSpacer__36d07 {
+.\_36d072eab2b2e737-scrollerSpacer {
     height: 28px !important;
 }
-.align-chat-input .inTextChannel_b88801 .text_b88801>strong {
+.align-chat-input .b8880176888cc928-inTextChannel .b8880176888cc928-text>strong {
     color: var(--text-secondary);
 }
-.attachButton__0923f path {
+.\_0923f156a0410684-attachButton path {
     d: path("M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm0-17a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H7a1 1 0 1 1 0-2h4V7a1 1 0 0 1 1-1Z");
 }
-.chatTypingGradientAtBottom__36d07 {
+.\_36d072eab2b2e737-chatTypingGradientAtBottom {
     display: none;
 }
-.chatTypingGradientNotAtBottom__36d07 {
+.\_36d072eab2b2e737-chatTypingGradientNotAtBottom {
     display: none;
 }
-.inTextChannel_b88801.base_b88801 {
+.b8880176888cc928-inTextChannel.b8880176888cc928-base {
   position: absolute !important;
   bottom: -5px !important;
   top: auto;
   left: 8px;
   right: 8px;
-  z-index: 9999 !important;
+  z-index: 999 !important;
 
   margin: 0;
   padding: 6px 8px;
@@ -165,10 +145,10 @@ div[class^="nameTag__"] div[class^="panelSubtextContainer__"] div {
   transform: none;
   transition: none;
 }
-.wrapper__44df5 {
+.\_44df51b030bd5ece-wrapper {
   margin-bottom: 10px;
 }
-.inTextChannel_b88801 .text_b88801 {
+.b8880176888cc928-inTextChannel .b8880176888cc928-text {
   margin-left: 10px;
 }
 /* END TYPING INDICATOR REVERT */
