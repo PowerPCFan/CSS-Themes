@@ -12,7 +12,7 @@ div[class*="-memberInner"] {
 }
 
 /* Non-nitro profile background color */
-div[class*="-outer"] {
+div[id^="popout_"] div[aria-modal="true"] div[class*="-outer"] {
     background-color: var(--background-base-lowest) !important;
 }
 
