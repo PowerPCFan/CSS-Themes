@@ -1,44 +1,54 @@
-@import url("https://raw.githubusercontent.com/scattagain/VencordStuff/refs/heads/main/css/GuildbarRevert.css");  /* Server bar revert */
+/* TODO: Add back server bar revert once fixed */
+/* TODO: Add back fixed typing indicator revert */
 
 /* extra spacing below most recent message (more like old UI) */
-div[class*="-channelBottomBarArea"] {
-    margin-top: 0.5rem !important;
+div[class*="-channelBottomBarArea"],
+div[class*="channelBottomBarArea_"] {
+    /* margin-top: 0.5rem !important; */
 }
 
 /* Members list spacing/padding */
-div[class*="-memberInner"] {
+div[class*="-memberInner"],
+div[class*="memberInner__"] {
     margin-top: 3px !important;
     margin-bottom: 3px !important;
 }
 
 /* Non-nitro profile background color */
-div[id^="popout_"] div[aria-modal="true"] div[class*="-outer"] {
+div[id^="popout_"] div[aria-modal="true"] div[class*="-outer"],
+div[id^="popout_"] div[aria-modal="true"] div[class*="outer_"] {
     background-color: var(--background-base-lowest) !important;
 }
 
 /* new user area revert */
-.visual-refresh div[class*="-sidebar"] section[class*="-panels"] {
+.visual-refresh div[class*="-sidebar"] section[class*="-panels"],
+.visual-refresh div[class*="sidebar__"] section[class*="panels__"] {
     width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);
     left: var(--custom-guild-list-width);
     bottom: 0px;
     border-radius: 0px;
     border: none;
 }
-div[class*="-nameTag"] div[class*="-panelTitleContainer"] {
+div[class*="-nameTag"] div[class*="-panelTitleContainer"],
+div[class*="nameTag__"] div[class*="panelTitleContainer__"] {
     margin-bottom: 0;
 }
-div[class*="-nameTag"] div[class*="-panelTitleContainer"] div {
+div[class*="-nameTag"] div[class*="-panelTitleContainer"] div,
+div[class*="nameTag__"] div[class*="panelTitleContainer__"] div {
     font-size: 0.9rem !important;
 }
-div[class*="-nameTag"] div[class*="-panelSubtextContainer"] div {
+div[class*="-nameTag"] div[class*="-panelSubtextContainer"] div,
+div[class*="nameTag__"] div[class*="panelSubtextContainer__"] div {
     font-size: 0.75rem !important;
 }
-.visual-refresh nav[class*=-guilds] {
+.visual-refresh nav[class*="-guilds"],
+.visual-refresh nav[class*="guilds__"] {
   margin-bottom: unset;
 }
 
 /* make server title thing at the top left aligned */
-div[class*="-bar"] div[class*="-title"] { 
+div[class*="-bar"] div[class*="-title"],
+div[class*="bar_"] div[class*="title_"] { 
   margin-left: 8px;
   justify-content: left;
 }
@@ -72,16 +82,20 @@ div[class*="-bar"] div[class*="-title"] {
     margin-top: 4px;
 }
 
-#vc-spotify-player div[class*="-slider"] {
+#vc-spotify-player div[class*="-slider"],
+#vc-spotify-player div[class*="slider_"] {
     --grabber-size: 12px !important;
 }
 
-#vc-spotify-player div[class*="-grabber"] {
+#vc-spotify-player div[class*="-grabber"],
+#vc-spotify-player div[class*="grabber_"] {
     transition: left 0.2s ease;
 }
 
 #vc-spotify-player div[class*="-grabber"],
-#vc-spotify-player div[class*="-slider"] {
+#vc-spotify-player div[class*="-slider"],
+#vc-spotify-player div[class*="grabber_"],
+#vc-spotify-player div[class*="slider_"] {
     cursor: pointer;
 }
 
@@ -93,62 +107,3 @@ div[class*="-bar"] div[class*="-title"] {
     display: inline-block;
     font-style: normal;
 }
-
-/* TYPING INDICATOR REVERT */
-.f75fb00fb7356cbe-channelTextArea {
-    margin-bottom: 25px;
-}
-.align-chat-input {
-    --custom-channel-textarea-text-area-height: 52px;
-}
-.align-chat-input .\_0923f156a0410684-attachWrapper {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.align-chat-input .b8880176888cc928-inTextChannel.b8880176888cc928-base {
-    bottom: 0px;
-    top: auto;
-}
-.align-chat-input .b8880176888cc928-inTextChannel .b8880176888cc928-typingDots {
-    margin-left: 5px;
-}
-.align-chat-input .b8880176888cc928-inTextChannel .b8880176888cc928-text {
-    margin-left: 0cqw
-}
-.\_36d072eab2b2e737-scrollerSpacer {
-    height: 28px !important;
-}
-.align-chat-input .b8880176888cc928-inTextChannel .b8880176888cc928-text>strong {
-    color: var(--text-secondary);
-}
-.\_0923f156a0410684-attachButton path {
-    d: path("M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm0-17a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H7a1 1 0 1 1 0-2h4V7a1 1 0 0 1 1-1Z");
-}
-.\_36d072eab2b2e737-chatTypingGradientAtBottom {
-    display: none;
-}
-.\_36d072eab2b2e737-chatTypingGradientNotAtBottom {
-    display: none;
-}
-.b8880176888cc928-inTextChannel.b8880176888cc928-base {
-  position: absolute !important;
-  bottom: -5px !important;
-  top: auto;
-  left: 8px;
-  right: 8px;
-  z-index: 999 !important;
-
-  margin: 0;
-  padding: 6px 8px;
-
-  pointer-events: auto;
-  transform: none;
-  transition: none;
-}
-.\_44df51b030bd5ece-wrapper {
-  margin-bottom: 10px;
-}
-.b8880176888cc928-inTextChannel .b8880176888cc928-text {
-  margin-left: 10px;
-}
-/* END TYPING INDICATOR REVERT */
