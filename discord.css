@@ -1,10 +1,40 @@
-/* TODO: Add back server bar revert once fixed */
-/* TODO: Add back fixed typing indicator revert */
+/* Server bar revert */
+@import url("https://raw.githubusercontent.com/scattagain/VencordStuff/4fa465629d6d71092c20aa11245abb6ad4a44641/css/GuildbarRevert.css");
+
+/* TODO: Add back fixed typing indicator revert and re-enable below line along with it */
 
 /* extra spacing below most recent message (more like old UI) */
 div[class*="-channelBottomBarArea"],
 div[class*="channelBottomBarArea_"] {
     /* margin-top: 0.5rem !important; */
+}
+
+/* Fix role viewer that looks terrible now */
+.vc-permviewer-role-button {
+    padding: 2px
+}
+[class^=roleTag] > [class^=role] {
+    border-radius: var(--radius-sm);
+    gap: 4px;
+    padding: 0 4px;
+
+    > [class^=roleCircle] {
+        margin: unset
+    }
+
+    > span > [class^=roleIcon] {
+        height: unset;
+        width: unset;
+        margin-inline-start: unset;
+    }
+
+    > [class^=removeButton] {
+        position: absolute;
+        height: 12px;
+        width: 12px;
+        opacity: 0;
+        &:hover { opacity: 1 }
+    }
 }
 
 /* Members list spacing/padding */
@@ -107,3 +137,26 @@ div[class*="bar_"] div[class*="title_"] {
     display: inline-block;
     font-style: normal;
 }
+
+/* uncomment for funny */
+/* img[src="/assets/a6b1ba6fa378a731.svg"] {
+    content: url("https://cdn.discordapp.com/emojis/1438128337523441754.png");
+}
+button[data-name="sob"] {
+    background-image: url("https://cdn.discordapp.com/emojis/1438128337523441754.png");
+    background-size: 95%;
+    div {
+        display: none;
+    }
+}
+
+img[src="/assets/607676c4d5d72659.svg"] {
+    content: url("https://cdn.discordapp.com/emojis/1435630925194199102.webp?size=128");
+}
+button[data-name="pray"] {
+    background-image: url("https://cdn.discordapp.com/emojis/1435630925194199102.webp?size=128");
+    background-size: 95%;
+    div {
+        display: none;
+    }
+} */
