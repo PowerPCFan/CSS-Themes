@@ -76,13 +76,6 @@ div[class*="nameTag__"] div[class*="panelSubtextContainer__"] div {
   margin-bottom: unset;
 }
 
-/* make server title thing at the top left aligned */
-div[class*="-bar"] div[class*="-title"],
-div[class*="bar_"] div[class*="title_"] { 
-  margin-left: 8px;
-  justify-content: left;
-}
-
 /* improve UI of vencord spotify player thing (if you have that plugin enabled) */
 #vc-spotify-player {
     padding: 16px 16px 8px 16px;
