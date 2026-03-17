@@ -1,7 +1,10 @@
 /* Server bar revert */
 @import url("https://raw.githubusercontent.com/scattagain/VencordStuff/4fa465629d6d71092c20aa11245abb6ad4a44641/css/GuildbarRevert.css");
 
-/* TODO: Add back fixed typing indicator revert and re-enable below line along with it */
+.bar_c38106.theme-dark.images-dark {
+    /* fix for linux close button bug */
+    padding-right: 0;
+}
 
 /* extra spacing below most recent message (more like old UI) */
 div[class*="-channelBottomBarArea"],
